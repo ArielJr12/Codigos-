@@ -1,0 +1,49 @@
+from tkinter import *
+from tkinter import messagebox
+
+window = Tk()
+window.title("Registro pa!")
+window.geometry("400x400")
+
+lbl = Label(window,text="Ingresa tu nombre")
+
+lbl1 = Label(window,text="Ingresa tu apellido")
+
+lbl2 = Label(window,text="Ingresa tu edad")
+
+lbl3 = Label(window,text="Ingresa tu usuario")
+
+lbl4 = Label(window,text="Ingresa tu contraseña")
+
+texto = Entry()
+
+texto1 = Entry()
+
+texto2 = Entry()
+
+texto3 = Entry()
+
+texto4 = Entry()
+
+def Condicion():
+    if texto.get() == "Ariel" and texto1.get() == "De Sedas" and texto2.get() == "16" and texto3.get() == "ArielJr" and texto4.get() == "1234":
+        messagebox.showinfo("Login", "Login correcto")
+
+    else:
+        messagebox.showerror("Login", "Algo esta mal, revisa la información y vuelve a intentarlo")
+
+btn = Button(window, text="Enviar", command=Condicion)
+
+lbl.pack()
+texto.pack()
+lbl1.pack()
+texto1.pack()
+lbl2.pack()
+texto2.pack()
+lbl3.pack()
+texto3.pack()
+lbl4.pack()
+texto4.pack()
+btn.pack()
+
+window.mainloop()
